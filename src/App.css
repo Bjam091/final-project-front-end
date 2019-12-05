@@ -1,0 +1,172 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+  font-family: 'Noto Sans', sans-serif;
+  color: deeppurple;
+  height: 100%;
+  overflow: auto;
+}
+
+nav {
+  font-family: 'Beth Ellen', cursive;
+}
+
+button {
+  background: none;
+}
+
+.App {
+  background: none;
+  margin: auto;
+  color: #32093f;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #2f183f;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#menu {
+  background: #fff;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 10;
+  }
+
+
+/* Grid display for splash page */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.grid::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.grid > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/* Just to make the grid visible */
+
+.grid > * {
+  background: rgba(0,0,0,0.1);
+  border: 1px white solid;
+}
+
+
+.container {
+  position: relative;
+}
+
+#broadcast-dot {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  margin: 10px;
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #73F58F;
+  align-items: center;
+}
+
+@keyframes green-dot-bounce {
+  0%   {height: 15px; width: 15px;}
+  10%  {height: 16px; width: 16px;}
+  20%  {height: 17px; width: 17px;}
+  30%  {height: 18px; width: 18px;}
+  40%  {height: 19px; width: 19px;}
+  50%  {height: 20px; width: 20px;}
+  60%  {height: 19px; width: 19px;}
+  70%  {height: 18px; width: 18px;}
+  80%  {height: 17px; width: 17px;}
+  90%  {height: 16px; width: 16px;}
+  100% {height: 15px; width: 15px;}
+}
+
+.green-dot {
+  animation-name: green-dot-bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.nearby-users {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  z-index: 5;
+  height: 30px;
+  width: 30px;
+  border-radius: 40px;
+  background-color: #f40d30;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: white;
+  border-top: 2px solid #8f27db;
+}
+
+.navbuttons {
+  height: 20px;
+  width: 20px;
+  margin-top: 25px;
+}
+
+.current-song {
+  position: absolute;
+  bottom: 30px;
+  z-index: 5;
+  width: 100vw;
+  min-height: 50px;
+}
